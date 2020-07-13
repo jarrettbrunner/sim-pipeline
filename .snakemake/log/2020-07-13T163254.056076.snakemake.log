@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 15 of /Users/jarrettbrunner/Desktop/sim-pipeline/Snakefile:
+Missing input files for rule make_model:
+data/script1.py
+data/script2.py

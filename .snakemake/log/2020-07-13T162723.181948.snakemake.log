@@ -1,0 +1,28 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	make_model
+	2	run_scripts
+	4
+
+[Mon Jul 13 16:27:23 2020]
+rule run_scripts:
+    input: scripts/script1.py
+    output: data/script1.py
+    jobid: 2
+    wildcards: example=script1.py
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 7 of /Users/jarrettbrunner/Desktop/sim-pipeline/Snakefile:
+Job completed successfully, but some output files are missing. Missing files after 5 seconds:
+data/script1.py
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+  File "/Users/jarrettbrunner/miniconda3/lib/python3.6/site-packages/snakemake/executors/__init__.py", line 544, in handle_job_success
+  File "/Users/jarrettbrunner/miniconda3/lib/python3.6/site-packages/snakemake/executors/__init__.py", line 231, in handle_job_success
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/jarrettbrunner/Desktop/sim-pipeline/.snakemake/log/2020-07-13T162723.181948.snakemake.log
